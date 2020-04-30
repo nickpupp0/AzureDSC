@@ -4,16 +4,14 @@ Configuration SampleConfig
     Import-DscResource -ModuleName ComputerManagementDsc
 
     Node localhost
-
-	{
-
-	File InvokeDownload{
-	  DestinationPath = "C:\Users\vm01-01\Desktop\hello.ps1"
+    	{
+	  File InvokeDownload{
+	  # Replace with your own path
+	  DestinationPath = "C:\hello.ps1"
 	  Ensure = "Present"
 	  Contents = "writing text to this file"
 	}
 	
-	}
-
+    }
 
 }
